@@ -15,12 +15,12 @@ Admin
         <div class="card mb-3 box-shadow">
             <img class="card-img-top" style=" width: 100%; display: block;" src="{{ asset($product->image) }}">
             <div class="card-body">
-                <p class="card-text" style="height: 60px;">{{$product->name}}</p>
+                <p class="card-text" style="height: 60px;">{{$product->title}}</p>
                 <small class="text-muted" >Цена : {{$product->price}} тг.   </small>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <a href="/Product/{{$product->id}}"  class="btn btn-sm btn-outline-secondary">Delete</a>
-                      <a href="/changeProduct/{{$product->id}}"  class="btn btn-sm btn-outline-secondary">Change</a>
+                    <a href="/all_Products/{{$product->id}}"  class="btn btn-sm btn-outline-secondary">В корзину</a>
+                        <a href="/Order/{{$product->id}}"  class="btn btn-sm btn-outline-secondary">Купить</a>
                     </div>
                   </div>
             </div>

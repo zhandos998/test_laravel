@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-
-    {{-- <div class="row justify-content-center">
+<div class="container">
+    <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
@@ -15,18 +15,10 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <a href="/products">Products</a>
                 </div>
             </div>
         </div>
-    </div> --}}
-
-{{-- @if(auth()->check() && auth()->user()->hasRole('project-manager'))
-Project Manager Panel
-@endif
-
-@if(auth()->check() && auth()->user()->hasRole('web-developer'))
-Web Developer Panel
-@endif --}}
-<a href='/all_Products'><button type="button" class="btn btn-primary">Primary</button></a>
-
+    </div>
+</div>
 @endsection

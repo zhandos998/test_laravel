@@ -50,7 +50,7 @@ class ProductSeeder extends Seeder
         for($i=0;$i<15;$i++)
         {
             $product = new Product();
-            $product->name=$names[$i];
+            $product->title=$names[$i];
             $product->price=$prices[$i];
             if ($i==1 || $i==7 || $i==9 || $i==10 || $i==14)
             $product->image='storage/products/product_'.($i+1).'.png';
