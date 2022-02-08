@@ -6,12 +6,13 @@ Admin
 
 @section('navbar_button')
     <li class="nav-item">
-        <a class="nav-link" href="/basket">{{ __('Basket') }}</a>
+        <a class="nav-link" href="/manager/orders">{{ __('Orders') }}</a>
     </li>
 @endsection
 
 @section('content')
 <div class="row">
+    <a href="/manager/add_product"><button type="button" class="btn btn-outline-dark">Add Products</button></a>
     @foreach ($products as $product)
     <div class="col-md-3">
         <div class="card mb-3 box-shadow">
@@ -21,10 +22,8 @@ Admin
                 <small class="text-muted" >Цена : {{$product->price}} тг.</small>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                        <!-- <a href="/all_Products/{{$product->id}}"  class="btn btn-sm btn-outline-secondary">В корзину</a>
-                        <a href="/Order/{{$product->id}}"  class="btn btn-sm btn-outline-secondary">Купить</a> -->
-                        <a class="btn btn-sm btn-outline-secondary to_basket" name="basket" value="{{$product->id}}">В корзину</a>
-                        <a href="/basket/{{$product->id}}" class="btn btn-sm btn-outline-secondary">Купить</a>
+                        <button type="button" class="btn btn-outline-dark"><a href="/manager/change_product/{{$product->id}}">Change Products</a></button>
+                        <button type="button" class="btn btn-outline-dark"><a href="/manager/delete_product/{{$product->id}}">Delete Products</a></button>
                     </div>
                   </div>
             </div>
@@ -48,7 +47,6 @@ Admin
                         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
                     },
                     success: function (data) {
-                        alert(data);
                         // if (data == true)
                         //     alert("Success");
                         // else

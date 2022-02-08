@@ -18,10 +18,10 @@ class CreateOrdersTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('phone_number');
-            $table->string('price');
-            $table->longText('product_name');
-            $table->unsignedBigInteger('id_status');
-            // $table->timestamps();
+            $table->json('price');
+            $table->json('product_name');
+            // $table->unsignedBigInteger('id_status');
+            $table->timestamps();
         });
     }
 

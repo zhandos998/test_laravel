@@ -29,15 +29,15 @@
         @endif
         <div class="form-group">
             <label>Фамилия</label>
-            <input name="lastname" class="form-control" placeholder="Введите фамилию">
+            <input name="last_name" class="form-control" placeholder="Введите фамилию">
         </div>
         <div class="form-group">
             <label>Имя</label>
-            <input name="firstname" class="form-control" placeholder="Введите имя">
+            <input name="first_name" class="form-control" placeholder="Введите имя">
         </div>
         <div class="form-group">
             <label>Номер телефона</label>
-            <input name="number" class="form-control" placeholder="Введите номер телефона">
+            <input name="phone_number" class="form-control" placeholder="Введите номер телефона">
         </div>
         <button type="submit" class="btn btn-primary">Отправить</button>
     </form>
@@ -57,18 +57,7 @@
                         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
                     },
                     success: function (data) {
-                        alert(el.parent());
-                        alert(el.parents()[0]);
-                        alert(el.parents()[1]);
-                        alert(el.parents()[2]);
-                        alert(el.parents()[3]);
                         el.parents()[4].remove();
-
-                        alert(data);
-                        // if (data == true)
-                        //     alert("Success");
-                        // else
-                        //     alert("Failed");
                     },
                     error: function (msg) {
                         alert('Ошибка');

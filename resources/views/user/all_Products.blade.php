@@ -13,6 +13,7 @@
 
 @section('content')
 <div class="row">
+    delete this please
     @foreach ($products as $product)
     <div class="col-md-3">
         <div class="card mb-3 box-shadow">
